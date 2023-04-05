@@ -9,20 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet private var counterText: UILabel!
+    @IBOutlet private var countedLabel: UILabel!
     
-    @IBOutlet weak var counted: UILabel!
-    
-    
-    @IBAction func countButton(_ sender: Any) {
-        if let text = counted.text, let value = Int(text) {
-            counted.text = "\(value + 1)"
+    @IBAction func countButtonTapped(_ sender: Any) {
+        if let text = countedLabel.text, let value = Int(text) {
+            countedLabel.text = "\(value + 1)"
             }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 
